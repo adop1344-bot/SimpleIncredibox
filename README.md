@@ -1,2 +1,49 @@
 # SimpleIncredibox
-Simple Android Java game inspired by Incredibox - mix musical loops by placing characters on stage
+
+Простое Android-приложение (игра) на Java, вдохновлённое [Incredibox](https://www.incredibox.com/).
+
+## Описание
+
+- Перетаскивайте иконки персонажей (звуков) на сцену.
+- Каждый персонаж проигрывает свой зацикленный звук (бит, эффект, мелодия, голос).
+- Можно комбинировать до 7 слотов одновременно.
+- Нажмите на слот, чтобы убрать персонажа.
+
+Это упрощённый прототип. Звуки генерируются программно через `ToneGenerator` (разные частоты). В реальном проекте замените на аудиофайлы из `res/raw`.
+
+## Структура проекта
+
+Стандартный Android-проект:
+- `app/src/main/java/com/example/simpleincredibox/` — Java-код
+- `app/src/main/res/` — layout и ресурсы
+- Gradle-файлы для сборки
+
+## Как собрать
+
+1. Откройте проект в Android Studio.
+2. Sync Gradle.
+3. Запустите на эмуляторе или устройстве (minSdk 24).
+
+Или соберите APK:
+```bash
+./gradlew assembleDebug
+```
+
+APK будет в `app/build/outputs/apk/debug/`.
+
+## Особенности реализации
+
+- Drag & Drop через `OnDragListener` и `OnLongClickListener`.
+- 4 типа звуков: Beat (низкий), Effect, Melody, Voice (высокий).
+- Циклическое воспроизведение через `Handler` + `ToneGenerator`.
+- Простой UI без сложных анимаций.
+
+## Возможные улучшения
+
+- Добавить реальные .ogg/.wav файлы в `res/raw` и использовать `SoundPool` или `MediaPlayer`.
+- Анимации персонажей.
+- Запись микса.
+- Больше слотов и звуков.
+- Тёмная тема / стиль Incredibox.
+
+Создано с помощью Grok.

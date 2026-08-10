@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Simple Incredibox</string>
+    <string name="stage_hint">Перетащите персонажа сюда</string>
+    <string name="palette_title">Персонажи</string>
+</resources>

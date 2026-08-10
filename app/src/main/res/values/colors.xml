@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0F0F1A</color>
+    <color name="stage_bg">#1A1A2E</color>
+    <color name="slot_empty">#2A2A4A</color>
+    <color name="slot_filled">#3D5A80</color>
+    <color name="beat_color">#E63946</color>
+    <color name="effect_color">#F4A261</color>
+    <color name="melody_color">#2A9D8F</color>
+    <color name="voice_color">#E9C46A</color>
+    <color name="text_primary">#FFFFFF</color>
+</resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:padding="8dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple Incredibox"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="8dp" />
+
+    <!-- Stage area with 7 slots -->
+    <LinearLayout
+        android:id="@+id/stageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/stage_bg"
+        android:padding="12dp">
+
+        <FrameLayout
+            android:id="@+id/slot0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@color/slot_empty"
+            android:tag="0" />
+
+        <FrameLayout
+            android:id="@+id/slot1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@color/slot_empty"
+            android:tag="1" />
+
+        <FrameLayout
+            android:id="@+id/slot2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@color/slot_empty"
+            android:tag="2" />
+
+        <FrameLayout
+            android:id="@+id/slot3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@color/slot_empty"
+            android:tag="3" />
+
+        <FrameLayout
+            android:id="@+id/slot4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@color/slot_empty"
+            android:tag="4" />
+
+        <FrameLayout
+            android:id="@+id/slot5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@color/slot_empty"
+            android:tag="5" />
+
+        <FrameLayout
+            android:id="@+id/slot6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@color/slot_empty"
+            android:tag="6" />
+
+    </LinearLayout>
+
+    <!-- Palette of characters -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/palette_title"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/paletteLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Characters will be added programmatically -->
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Долгое нажатие на иконку → перетащите на слот. Тап по слоту → убрать."
+        android:textColor="#AAAAAA"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:paddingTop="4dp" />
+
+</LinearLayout>
