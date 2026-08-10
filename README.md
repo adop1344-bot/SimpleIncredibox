@@ -1,5 +1,7 @@
 # SimpleIncredibox
 
+![Avatar](avatar.svg)
+
 Простое Android-приложение (игра) на Java, вдохновлённое [Incredibox](https://www.incredibox.com/).
 
 ## Описание
@@ -21,6 +23,12 @@
 4. Распакуй zip → получишь `app-debug.apk`
 
 Можно также запустить сборку вручную: Actions → Build APK → **Run workflow**.
+
+## Аватарка / Иконка
+
+Аватарка приложения лежит в корне репозитория: [`avatar.svg`](avatar.svg)
+
+Также добавлен векторный drawable для launcher: `app/src/main/res/drawable/ic_launcher_foreground.xml`
 
 ## Структура проекта
 
