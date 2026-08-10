@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0F1A"/>
+      <stop offset="100%" stop-color="#1A1A2E"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F5FF"/>
+      <stop offset="50%" stop-color="#FF00AA"/>
+      <stop offset="100%" stop-color="#FFEE00"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B5A2B"/>
+      <stop offset="100%" stop-color="#5C3A1E"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="250" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="240" fill="none" stroke="url(#neon)" stroke-width="8" filter="url(#glow)"/>
+  
+  <!-- Headphones -->
+  <path d="M120 220 Q120 140 256 140 Q392 140 392 220" fill="none" stroke="#9B59B6" stroke-width="28" stroke-linecap="round"/>
+  <rect x="100" y="210" width="50" height="90" rx="15" fill="#8E44AD"/>
+  <rect x="362" y="210" width="50" height="90" rx="15" fill="#8E44AD"/>
+  
+  <!-- Cap -->
+  <ellipse cx="256" cy="175" rx="95" ry="35" fill="#2C3E50"/>
+  <path d="M160 175 Q256 130 352 175" fill="#34495E"/>
+  <polygon points="256,145 270,175 242,175" fill="#E74C3C"/>
+  
+  <!-- Face -->
+  <ellipse cx="256" cy="260" rx="85" ry="95" fill="url(#face)"/>
+  
+  <!-- Eyes -->
+  <circle cx="225" cy="245" r="18" fill="white"/>
+  <circle cx="287" cy="245" r="18" fill="white"/>
+  <circle cx="228" cy="248" r="10" fill="#2C3E50"/>
+  <circle cx="290" cy="248" r="10" fill="#2C3E50"/>
+  <circle cx="231" cy="245" r="3" fill="white"/>
+  <circle cx="293" cy="245" r="3" fill="white"/>
+  
+  <!-- Wink / smile -->
+  <path d="M210 290 Q256 330 302 290" fill="none" stroke="#2C3E50" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="256" cy="305" rx="25" ry="12" fill="#E74C3C"/>
+  
+  <!-- Hoodie -->
+  <path d="M140 340 Q256 380 372 340 L380 450 Q256 480 132 450 Z" fill="#1A1A2E"/>
+  <path d="M180 350 Q256 370 332 350" fill="none" stroke="#00F5FF" stroke-width="6"/>
+  <path d="M200 360 Q256 375 312 360" fill="none" stroke="#FF00AA" stroke-width="4"/>
+  
+  <!-- Music icons around -->
+  <g filter="url(#glow)">
+    <circle cx="100" cy="120" r="28" fill="#FF2E63"/>
+    <text x="100" y="128" text-anchor="middle" font-size="24" fill="white" font-family="Arial">♪</text>
+    
+    <circle cx="412" cy="120" r="28" fill="#08D9D6"/>
+    <text x="412" y="128" text-anchor="middle" font-size="22" fill="white" font-family="Arial">▶</text>
+    
+    <circle cx="80" cy="300" r="24" fill="#FFEE00"/>
+    <text x="80" y="308" text-anchor="middle" font-size="18" fill="#1A1A2E" font-family="Arial">B</text>
+    
+    <circle cx="432" cy="300" r="24" fill="#9B59B6"/>
+    <text x="432" y="308" text-anchor="middle" font-size="16" fill="white" font-family="Arial">♫</text>
+  </g>
+  
+  <!-- Text -->
+  <text x="256" y="470" text-anchor="middle" font-size="32" font-weight="bold" fill="url(#neon)" font-family="Arial Black, Arial">BEATBOX</text>
+</svg>

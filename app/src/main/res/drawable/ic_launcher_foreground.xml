@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M54,54m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0"/>
+    
+    <!-- Neon ring -->
+    <path
+        android:strokeColor="#00F5FF"
+        android:strokeWidth="3"
+        android:fillColor="#00000000"
+        android:pathData="M54,54m-45,0a45,45 0,1 1,90 0a45,45 0,1 1,-90 0"/>
+    
+    <!-- Headphones arc -->
+    <path
+        android:strokeColor="#9B59B6"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M30,48 Q30,28 54,28 Q78,28 78,48"/>
+    
+    <!-- Left earcup -->
+    <path
+        android:fillColor="#8E44AD"
+        android:pathData="M25,45 h12 v20 a6,6 0 0 1 -6,6 h0 a6,6 0 0 1 -6,-6 z"/>
+    
+    <!-- Right earcup -->
+    <path
+        android:fillColor="#8E44AD"
+        android:pathData="M71,45 h12 v20 a6,6 0 0 1 -6,6 h0 a6,6 0 0 1 -6,-6 z"/>
+    
+    <!-- Face -->
+    <path
+        android:fillColor="#8B5A2B"
+        android:pathData="M54,58m-22,0a22,24 0,1 1,44 0a22,24 0,1 1,-44 0"/>
+    
+    <!-- Eyes -->
+    <path android:fillColor="#FFFFFF" android:pathData="M46,52m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M62,52m-5,0a5,5 0,1 1,10 0a5,5 0,1 1,-10 0"/>
+    <path android:fillColor="#2C3E50" android:pathData="M47,53m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0"/>
+    <path android:fillColor="#2C3E50" android:pathData="M63,53m-2.5,0a2.5,2.5 0,1 1,5 0a2.5,2.5 0,1 1,-5 0"/>
+    
+    <!-- Smile -->
+    <path
+        android:strokeColor="#2C3E50"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M44,64 Q54,74 64,64"/>
+    
+    <!-- Music note -->
+    <path
+        android:fillColor="#FF2E63"
+        android:pathData="M78,30 m-8,0 a8,8 0 1,1 16,0 a8,8 0 1,1 -16,0"/>
+</vector>
