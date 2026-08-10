@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:  # allow manual run
+  workflow_dispatch:  # allow manual run from Actions tab
 
 jobs:
   build:
@@ -24,18 +24,19 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install Gradle
+      - name: Install Gradle 8.5
         run: |
           curl -sL https://services.gradle.org/distributions/gradle-8.5-bin.zip -o /tmp/gradle.zip
           sudo unzip -q /tmp/gradle.zip -d /opt
           echo "/opt/gradle-8.5/bin" >> $GITHUB_PATH
+          gradle -v
 
-      - name: Generate Gradle Wrapper (if missing)
+      - name: Generate Gradle Wrapper
         run: |
-          if [ ! -f gradlew ]; then
-            gradle wrapper --gradle-version 8.5
-          fi
+          # Always regenerate so we have the complete wrapper (scripts + jar)
+          gradle wrapper --gradle-version 8.5
           chmod +x gradlew
+          ls -la gradlew gradle/wrapper/
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug --stacktrace --no-daemon
@@ -45,9 +46,9 @@ jobs:
         with:
           name: SimpleIncredibox-debug
           path: app/build/outputs/apk/debug/*.apk
-          retention-days: 30
+          retention-days: 90
 
-      - name: List output
+      - name: Show APK info
         run: |
-          ls -la app/build/outputs/apk/debug/ || true
-          find app/build/outputs -name "*.apk" || true
+          echo "=== APK files ==="
+          find app/build/outputs -name "*.apk" -exec ls -lh {} \;
