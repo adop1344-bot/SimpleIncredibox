@@ -11,20 +11,32 @@
 
 Это упрощённый прототип. Звуки генерируются программно через `ToneGenerator` (разные частоты). В реальном проекте замените на аудиофайлы из `res/raw`.
 
+## Скачать готовый APK
+
+Приложение **собирается автоматически** через GitHub Actions.
+
+1. Перейди во вкладку **Actions**: https://github.com/adop1344-bot/SimpleIncredibox/actions
+2. Выбери последний успешный workflow **Build APK**
+3. Внизу страницы в секции **Artifacts** скачай **SimpleIncredibox-debug**
+4. Распакуй zip → получишь `app-debug.apk`
+
+Можно также запустить сборку вручную: Actions → Build APK → **Run workflow**.
+
 ## Структура проекта
 
 Стандартный Android-проект:
 - `app/src/main/java/com/example/simpleincredibox/` — Java-код
 - `app/src/main/res/` — layout и ресурсы
 - Gradle-файлы для сборки
+- `.github/workflows/build-apk.yml` — автоматическая сборка APK
 
-## Как собрать
+## Как собрать локально
 
 1. Откройте проект в Android Studio.
 2. Sync Gradle.
 3. Запустите на эмуляторе или устройстве (minSdk 24).
 
-Или соберите APK:
+Или:
 ```bash
 ./gradlew assembleDebug
 ```
